@@ -1,0 +1,67 @@
+.video-player-wrapper{
+  max-width: 815px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  border: 1px solid red;
+
+
+}
+button{
+  background-color: transparent;
+  //border: 0;
+  box-shadow: none;
+  position: absolute;
+  transform: translateY(-50%);
+  border: 1px solid red;
+
+
+}
+button.prev{
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+button.next{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  z-index: 100;
+}
+::ng-deep.vg-icon-play_arrow:before{
+  content: url("../assets/icons-48-px-stop.svg") !important;
+  background: url("../assets/icons-48-px-stop.svg") no-repeat !important ;
+}
+::ng-deep vg-scrub-bar{
+  background: rgba(0,0,0,0.4) !important;
+  border: 0;
+  height: 7px !important;
+
+
+
+
+
+}
+::ng-deep vg-scrub-bar-current-time{
+  &:after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #94bbfc;
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+::ng-deep vg-scrub-bar-current-time .background{
+  background: #94bbfc !important;
+
+}
+::ng-deep.scrubBar{
+  //background-color: #fff !important;
+}
